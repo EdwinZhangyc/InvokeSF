@@ -1,13 +1,13 @@
 package com.zyc.demo.interfaces.Impl;
 
 
-import java.com.demo.Utils.HttpUtils;
-import java.com.demo.Utils.ReflectUtil;
-import java.com.demo.commons.XmlToPojoForBank;
-import java.com.demo.interfaces.ISFApplyOrderService;
-import java.com.demo.reqPojo.*;
-import java.com.demo.respPojo.EnterpriseQueryRespPojo;
-import java.com.demo.respPojo.SFOrderRespPojo;
+import com.zyc.demo.Utils.HttpUtils;
+import com.zyc.demo.Utils.ReflectUtil;
+import com.zyc.demo.commons.XmlToPojoForBank;
+import com.zyc.demo.interfaces.ISFApplyOrderService;
+import com.zyc.demo.reqPojo.*;
+import com.zyc.demo.respPojo.EnterpriseQueryRespPojo;
+import com.zyc.demo.respPojo.SFOrderRespPojo;
 
 //@Service("enterpriseQueryServiceImpl")
 //@Validated
@@ -31,7 +31,6 @@ public class SFApplyOrderServiceImpl implements ISFApplyOrderService {
 //	private String merchantCheck = "1";
 
 
-	@Override
 	public SFOrderRespPojo applyOrder(SFOrderReqPojo reqPojo) throws Exception {
 		if ("0".equals(merchantCheck)) {
 			SFOrderRespPojo resp = new SFOrderRespPojo();
