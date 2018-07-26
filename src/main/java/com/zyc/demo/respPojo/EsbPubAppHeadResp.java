@@ -6,9 +6,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import java.io.Serializable;
 
-/**
- * ESB 响应公共报文
- */
+
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = { "TellerId", "BranchId", "TlrPswd", "TlrLvl", "TlrType", "ChkFlag", "AuthFlag", "AuthTlrId",
 		"AuthBrchId" })

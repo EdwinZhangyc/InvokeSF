@@ -6,9 +6,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import java.io.Serializable;
 
-/**
- * ESB 请求公共报文 
- */
+
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = { "SvcId", "SvcScnId", "CnsmSysId", "ChnlType", "SrcSysId", 
 		"CnsmSysSeqNo", "SrcSysSeqNo", "Mac", "MacOrgId", "TranMode", "TranDate",

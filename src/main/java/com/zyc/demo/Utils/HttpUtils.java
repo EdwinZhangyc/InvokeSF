@@ -27,6 +27,9 @@ import java.security.SecureRandom;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 
+/**
+ * Http请求公共类
+ */
 public class HttpUtils {
 	private static final String CHARSET = "UTF-8";
 	private static final int CONNECT_TIMEOUT = 30*1000;

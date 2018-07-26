@@ -6,13 +6,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import java.io.Serializable;
 
-/**
- * 
- * @ClassName EsbBalanceReconReqBody
- * @Description 市场通查询现金管理出入金明细
- * @author 
- * @date 2016年9月10日
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = {"AppId","SessionKey","ValidTerm","PageType","OrgCode","OrgName","CrdtCode","BsnsLcnsNo","ClientName","QueryList"})
 public class EnterpriseQueryReqBody implements Serializable{

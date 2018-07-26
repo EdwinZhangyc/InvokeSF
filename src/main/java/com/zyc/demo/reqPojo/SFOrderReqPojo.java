@@ -1,10 +1,6 @@
 package com.zyc.demo.reqPojo;
 
-/**
- * 企业工商数据查询请求POJO
- * 
- * （组织机构代码、营业执照号码、机构名称至少有一个不为空）
- */
+
 public class SFOrderReqPojo extends BaseNormalReqPojo {
 	/**
 	 * @Fields serialVersionUID : TODO

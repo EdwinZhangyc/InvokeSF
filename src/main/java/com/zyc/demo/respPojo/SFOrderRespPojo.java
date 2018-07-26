@@ -1,8 +1,6 @@
 package com.zyc.demo.respPojo;
 
-/**
- * 企业工商数据查询响应POJO
- */
+
 public class SFOrderRespPojo extends BaseNormalRespPojo {
 	/**
 	 * @Fields serialVersionUID : TODO

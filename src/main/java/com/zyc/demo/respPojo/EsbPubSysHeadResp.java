@@ -3,9 +3,7 @@ package com.zyc.demo.respPojo;
 import javax.xml.bind.annotation.*;
 import java.io.Serializable;
 
-/**
- * ESB 响应公共报文 
- */
+
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = { "SvcId", "SvcScnId", "CnsmSysId", "PrvdSysId", "CnsmSysSeqNo", 
 		"PrvdSysSeqNo", "Mac", "MacOrgId", "TranDate", "TranTime", "TranRetSt", "PrvdSysSvrId" })

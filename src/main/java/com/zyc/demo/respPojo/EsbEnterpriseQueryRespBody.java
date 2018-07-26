@@ -6,13 +6,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import java.io.Serializable;
 
-/**
- * 
- * @ClassName EsbBalanceReconRespBody
- * @Description 市场通余额对账
- * @author zhaochen17273@hundsun.com
- * @date 2016年9月10日
- */
+
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = { "ErrCode","RetNum","PageType","StartDate","EndDate"})
 public class EsbEnterpriseQueryRespBody implements Serializable{

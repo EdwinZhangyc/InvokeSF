@@ -8,30 +8,34 @@ import com.zyc.demo.interfaces.ISFApplyOrderService;
 import com.zyc.demo.reqPojo.*;
 import com.zyc.demo.respPojo.EnterpriseQueryRespPojo;
 import com.zyc.demo.respPojo.SFOrderRespPojo;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 
-//@Service("enterpriseQueryServiceImpl")
-//@Validated
+/**
+ * 顺风下订单实现类
+ */
+@Service("SFApplyOrderServiceImpl")
+@Validated
 public class SFApplyOrderServiceImpl implements ISFApplyOrderService {
+
 	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(SFApplyOrderServiceImpl.class);
-//	@Value("${bohf.enterprise.query.url}")
-//	private String url;
-//	@Value("${bohf.esb.url}")
+	@Value("${bohf.esb.url}")
 	private String url;
-	//@Value("${bohf.enterprise.query.appid}")
+	@Value("${bohf.enterprise.query.appid}")
 	private String appid;
 	
-	//@Value("${bohf.enterprise.query.privatekey}")
+	@Value("${bohf.enterprise.query.privatekey}")
 	private String privatekey;
 	
-//	@Value("${test.flag}")
-//	private String testFlag;
-	
-	//@Value("${merchant.check}")
+
+	@Value("${merchant.check}")
 	private String merchantCheck;
-//	private String merchantCheck = "1";
 
 
 	public SFOrderRespPojo applyOrder(SFOrderReqPojo reqPojo) throws Exception {
+
+		//此处测试时使用添加挡板
 		if ("0".equals(merchantCheck)) {
 			SFOrderRespPojo resp = new SFOrderRespPojo();
 			resp.setRespCode("000000");
