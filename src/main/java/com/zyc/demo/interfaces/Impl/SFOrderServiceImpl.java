@@ -3,7 +3,6 @@ package com.zyc.demo.interfaces.Impl;
 
 import com.zyc.demo.Utils.ReflectUtil;
 import com.zyc.demo.commons.InvokeSFTool;
-import com.zyc.demo.commons.SFEncryption;
 import com.zyc.demo.commons.XmlToPojoForBank;
 import com.zyc.demo.interfaces.ISFOrderService;
 import com.zyc.demo.reqPojo.SFOrderReqPojo;
@@ -28,6 +27,7 @@ public class SFOrderServiceImpl implements ISFOrderService {
 	private String checkword = "XMFJSJ";
 	private String service = "OrderService";
 	private String lang = "zh-CN";
+	private String verity = "jqKCDvRAF2O91ldPHPZj9SBdOKn2huzj";
 
 	public SFOrderRespPojo applyOrder(SFOrderReqPojo reqPojo) throws Exception {
 
@@ -43,7 +43,8 @@ public class SFOrderServiceImpl implements ISFOrderService {
 
 		//String urlXML = "D:\\softWare\\windows\\IT\\主桥\\SF-CSIM-EXPRESS-SDK-V1.3\\callExpressRequest\\1.order.txt";
 		// 调用主桥方法得到响应
-		String xmlresp = InvokeSFTool.invokeSF(url, urlXML, checkword, SFEncryption.md5EncryptAndBase64(urlXML + checkword));
+		//String xmlresp = InvokeSFTool.invokeSF(url, urlXML, checkword, SFEncryption.md5EncryptAndBase64(urlXML + checkword));
+		String xmlresp = InvokeSFTool.invokeSF(url, urlXML, checkword, verity);
 
 		// 将响应json报文转换成服务响应信息Pojo
 		SFOrderRespPojo resp = jsonToRespPojo(xmlresp);
