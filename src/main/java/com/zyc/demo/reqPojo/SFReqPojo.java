@@ -1,6 +1,8 @@
-package com.test;
+package com.zyc.demo.reqPojo;
 
-public class SFReqPojo {
+import java.io.Serializable;
+
+public class SFReqPojo implements Serializable {
 
     private String xml;
 

@@ -74,9 +74,12 @@ public class HttpUtils {
 			}
 
 		} catch (ConnectTimeoutException e) {
+			e.printStackTrace();
 		} catch (SocketTimeoutException e) {
+			e.printStackTrace();
 		} catch (Exception e) {
 			logger.error("", e);
+			e.printStackTrace();
 		} finally {
 			if (null != resp) {
 				try {
@@ -251,9 +254,7 @@ public class HttpUtils {
 					logger.error("this server is not found : " + rtnValue);
 					throw new Exception();
 				}
-
 			}
-
 			return rtnValue;
 		} catch (ConnectTimeoutException e) {
 			throw new Exception();

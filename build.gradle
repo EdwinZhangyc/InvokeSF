@@ -2,12 +2,27 @@ group 'com.xmf'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse'
+apply plugin: 'eclipse-wtp'
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
+//目录指向配置
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+}
+
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'

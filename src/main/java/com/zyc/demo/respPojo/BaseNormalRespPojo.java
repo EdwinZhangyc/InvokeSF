@@ -23,4 +23,12 @@ public class BaseNormalRespPojo {
     public void setRespMsg(String respMsg) {
         this.respMsg = respMsg;
     }
+
+    @Override
+    public String toString() {
+        return "BaseNormalRespPojo{" +
+                "respCode='" + respCode + '\'' +
+                ", respMsg='" + respMsg + '\'' +
+                '}';
+    }
 }

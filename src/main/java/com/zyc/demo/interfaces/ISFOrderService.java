@@ -6,6 +6,6 @@ import com.zyc.demo.respPojo.SFOrderRespPojo;
 /**
  * 顺风下订单接口
  */
-public interface ISFApplyOrderService {
+public interface ISFOrderService {
       public SFOrderRespPojo applyOrder(SFOrderReqPojo reqPojo) throws Exception;
 }
